@@ -14,11 +14,11 @@ python finetune.py \
 --data_dir=train_test_data/ \
 --model_name_or_path=facebook/bart-large-cnn  \
 --learning_rate=1e-3 \
---train_batch_size=16 \
---eval_batch_size=16 \
+--train_batch_size=4 \
+--eval_batch_size=4 \
 --output_dir=$OUTPUT_DIR \
---num_train_epochs=1  \
---n_gpu=4 \
+--num_train_epochs=200  \
+--n_gpu=8 \
 --do_train \
 --do_predict $@
 
