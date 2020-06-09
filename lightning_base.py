@@ -17,6 +17,7 @@ from transformers import (
     AutoModelForTokenClassification,
     AutoModelWithLMHead,
     AutoTokenizer,
+    T5ForConditionalGeneration,
     get_linear_schedule_with_warmup,
 )
 
@@ -31,6 +32,7 @@ MODEL_MODES = {
     "pretraining": AutoModelForPreTraining,
     "token-classification": AutoModelForTokenClassification,
     "language-modeling": AutoModelWithLMHead,
+#     "t5", T5ForConditionalGeneration
 }
 
 

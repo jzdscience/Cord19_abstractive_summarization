@@ -20,7 +20,7 @@ logger = logging.getLogger(__name__)
 
 
 class SummarizationTrainer(BaseTransformer):
-
+#     mode = "t5"
     mode = "language-modeling"
 
     def __init__(self, hparams):
@@ -173,7 +173,8 @@ def main(args):
         checkpoints = list(sorted(glob.glob(os.path.join(args.output_dir, "checkpointepoch=*.ckpt"), recursive=True)))
         model = model.load_from_checkpoint(checkpoints[-1])
         trainer.test(model)
-    
+        
+        #save the pretrained model!
         model.model.save_pretrained(args.output_dir)
 
 

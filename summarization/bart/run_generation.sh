@@ -10,6 +10,6 @@ export PYTHONPATH="../../":"${PYTHONPATH}"
 python generate_summary_v2.py \
 --source_path=cnn_tiny/test.source \
 --output_path=$OUTPUT_DIR/generated_title.text \
---model_name=facebook/bart-large-cnn \
+--model_name=bart_utest_output \
 --device=cpu \
 --bs=5 \
