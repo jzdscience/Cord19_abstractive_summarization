@@ -26,8 +26,8 @@ python finetune.py \
 --train_batch_size=2 \
 --eval_batch_size=2 \
 --output_dir=$OUTPUT_DIR \
---num_train_epochs=200  \
---n_gpu=4  \
+--num_train_epochs=50  \
+--n_gpu=8  \
 --do_train \
 --do_predict $@
 
