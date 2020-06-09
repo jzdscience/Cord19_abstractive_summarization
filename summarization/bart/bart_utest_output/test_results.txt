@@ -1,0 +1,5 @@
+avg_val_loss = tensor(10.5517)
+epoch = 49
+loss = tensor(8.6362)
+train_loss = tensor(8.6362)
+val_loss = tensor(10.5517)
