@@ -18,7 +18,7 @@ python finetune.py \
 --eval_batch_size=16 \
 --output_dir=$OUTPUT_DIR \
 --num_train_epochs=1  \
---n_gpu=0 \
+--n_gpu=4 \
 --do_train \
 --do_predict $@
 
