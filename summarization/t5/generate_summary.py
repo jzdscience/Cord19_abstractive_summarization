@@ -73,7 +73,7 @@ def run_generate():
     parser.add_argument(
         "--output_path", type=str, help="where to save summaries",
     )
-    parser.add_argument("reference_path", type=str, help="like cnn_dm/test_reference_summaries.txt")
+    parser.add_argument("--reference_path", type=str, help="like cnn_dm/test_reference_summaries.txt")
     parser.add_argument(
         "--score_path", type=str, help="where to save the rouge score",
     )
