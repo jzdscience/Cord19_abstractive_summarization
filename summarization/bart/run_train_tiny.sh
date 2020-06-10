@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/bin/bash
 
 
 # Script for verifying that run_bart_sum can be invoked from its directory
@@ -8,7 +8,7 @@
 # tar -xzvf cnn_tiny.tgz
 # rm cnn_tiny.tgz
 
-export OUTPUT_DIR_NAME=bart_utest_output
+export OUTPUT_DIR_NAME=output/tiny_cnn
 export CURRENT_DIR=${PWD}
 export OUTPUT_DIR=${CURRENT_DIR}/${OUTPUT_DIR_NAME}
 
@@ -20,14 +20,14 @@ mkdir -p $OUTPUT_DIR
 # Add parent directory to python path to access lightning_base.py and utils.py
 export PYTHONPATH="../../":"${PYTHONPATH}"
 python finetune.py \
---data_dir=train_test_data/ \
---model_name_or_path=facebook/bart-large-cnn \
+--data_dir=cnn_tiny/ \
+--model_name_or_path=sshleifer/bart-tiny-random \
 --learning_rate=1e-2 \
 --train_batch_size=2 \
 --eval_batch_size=2 \
 --output_dir=$OUTPUT_DIR \
---num_train_epochs=50  \
---n_gpu=8  \
+--num_train_epochs=1  \
+--n_gpu=1  \
 --do_train \
 --do_predict $@
 

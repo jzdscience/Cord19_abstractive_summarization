@@ -21,7 +21,7 @@ mkdir -p $OUTPUT_DIR
 export PYTHONPATH="../../":"${PYTHONPATH}"
 python finetune.py \
 --data_dir=all_train_test_data/  \
---model_name_or_path=facebook/bart-large \
+--model_name_or_path=facebook/bart-large-cnn \
 --learning_rate=1e-3 \
 --train_batch_size=4 \
 --eval_batch_size=4 \
