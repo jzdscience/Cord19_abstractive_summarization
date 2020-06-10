@@ -1,0 +1,5 @@
+avg_val_loss = tensor(4.6897, device='cuda:0')
+epoch = 59
+loss = tensor(4.0770, device='cuda:0')
+train_loss = tensor(4.0770, device='cuda:0')
+val_loss = tensor(4.6897, device='cuda:0')
