@@ -3,3 +3,4 @@ data/
 *.pyc
 *.swp
 __temp_weight_ddp_end.ckpt
+slurm*
