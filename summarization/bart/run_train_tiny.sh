@@ -26,7 +26,7 @@ python finetune.py \
 --train_batch_size=2 \
 --eval_batch_size=2 \
 --output_dir=$OUTPUT_DIR \
---num_train_epochs=1  \
+--num_train_epochs=5  \
 --n_gpu=1  \
 --do_train \
 --do_predict $@

@@ -21,12 +21,12 @@ mkdir -p $OUTPUT_DIR
 export PYTHONPATH="../../":"${PYTHONPATH}"
 python finetune.py \
 --data_dir=all_train_test_data/  \
---model_name_or_path=facebook/bart-large-cnn \
+--model_name_or_path=sshleifer/bart-tiny-random \
 --learning_rate=1e-3 \
---train_batch_size=4 \
---eval_batch_size=4 \
+--train_batch_size=80 \
+--eval_batch_size=80 \
 --output_dir=$OUTPUT_DIR \
---num_train_epochs=100  \
+--num_train_epochs=60  \
 --n_gpu=1  \
 --do_train \
 --do_predict $@
