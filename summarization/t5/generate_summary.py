@@ -62,20 +62,20 @@ def calculate_rouge(output_lns, reference_lns, score_path):
 def run_generate():
     parser = argparse.ArgumentParser()
     parser.add_argument(
-        "model_size",
+        "--model_size",
         type=str,
         help="T5 model size, either 't5-small', 't5-base', 't5-large', 't5-3b', 't5-11b'. Defaults to 't5-base'.",
         default="t5-base",
     )
     parser.add_argument(
-        "input_path", type=str, help="like cnn_dm/test_articles_input.txt",
+        "--input_path", type=str, help="like cnn_dm/test_articles_input.txt",
     )
     parser.add_argument(
-        "output_path", type=str, help="where to save summaries",
+        "--output_path", type=str, help="where to save summaries",
     )
     parser.add_argument("reference_path", type=str, help="like cnn_dm/test_reference_summaries.txt")
     parser.add_argument(
-        "score_path", type=str, help="where to save the rouge score",
+        "--score_path", type=str, help="where to save the rouge score",
     )
     parser.add_argument(
         "--batch_size", type=int, default=8, required=False, help="batch size: how many to summarize at a time",
