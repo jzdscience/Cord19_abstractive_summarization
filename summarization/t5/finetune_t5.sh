@@ -18,14 +18,14 @@ mkdir -p $OUTPUT_DIR
 export PYTHONPATH="../":"${PYTHONPATH}"
 
 python finetune.py \
---data_dir=cnn_tiny/ \
+--data_dir=all_train_test_data/ \
 --model_name_or_path=t5-small \
 --learning_rate=1e-3 \
---train_batch_size=4 \
---eval_batch_size=4 \
+--train_batch_size=6 \
+--eval_batch_size=6 \
 --output_dir=$OUTPUT_DIR \
 --num_train_epochs=5  \
---n_gpu=0  \
+--n_gpu=1  \
 --do_train \
 --do_predict $@
 
