@@ -8,7 +8,7 @@
 # tar -xzvf cnn_tiny.tgz
 # rm cnn_tiny.tgz
 
-export OUTPUT_DIR_NAME=output/all_data_bart
+export OUTPUT_DIR_NAME=output/all_data_bart_large_cnn
 export CURRENT_DIR=${PWD}
 export OUTPUT_DIR=${CURRENT_DIR}/${OUTPUT_DIR_NAME}
 
@@ -21,12 +21,12 @@ mkdir -p $OUTPUT_DIR
 export PYTHONPATH="../../":"${PYTHONPATH}"
 python finetune.py \
 --data_dir=all_train_test_data/  \
---model_name_or_path=sshleifer/bart-tiny-random \
---learning_rate=1e-3 \
---train_batch_size=80 \
---eval_batch_size=80 \
+--model_name_or_path=facebook/bart-large-cnn \
+--learning_rate=1e-2 \
+--train_batch_size=1 \
+--eval_batch_size=1 \
 --output_dir=$OUTPUT_DIR \
---num_train_epochs=60  \
+--num_train_epochs=5  \
 --n_gpu=1  \
 --do_train \
 --do_predict $@
