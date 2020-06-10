@@ -20,7 +20,7 @@ def generate_summaries(lns, output_file_path, model_size, batch_size, device):
     model = T5ForConditionalGeneration.from_pretrained(model_size)
     model.to(device)
 
-    tokenizer = T5Tokenizer.from_pretrained(model_size)
+    tokenizer = T5Tokenizer.from_pretrained("t5-small")
 
     # update config with summarization specific params
     task_specific_params = model.config.task_specific_params
