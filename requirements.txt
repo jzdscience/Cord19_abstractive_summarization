@@ -214,7 +214,7 @@ traitlets==4.3.3
 transformers==2.11.0
 typed-ast==1.4.1
 typing-extensions @ file:///home/conda/feedstock_root/build_artifacts/typing_extensions_1588470653596/work
-urllib3==1.25.9
+urllib3==1.26.5
 vincent==0.4.4
 wasabi==0.6.0
 wcwidth==0.1.9
