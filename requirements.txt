@@ -79,7 +79,7 @@ jupyter-client==6.1.3
 jupyter-conda==3.2.0
 jupyter-core==4.6.3
 jupyter-telemetry==0.0.5
-jupyterhub==1.1.0
+jupyterhub==1.5.0
 jupyterlab==2.1.2
 jupyterlab-git @ file:///home/conda/feedstock_root/build_artifacts/jupyterlab-git_1588761564746/work
 jupyterlab-server @ file:///home/conda/feedstock_root/build_artifacts/jupyterlab_server_1589749309150/work
